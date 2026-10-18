@@ -1,0 +1,7 @@
+<h3>User No.<%= user.id %></h3>
+<ul>
+  <li>Username: <%= user.username %></li>
+  <li>Email: <%= user.email %></li>
+  <li>Password: <%= user.password %></li>
+  <li><%= link_to "Edit", edit_user_path(user) %></li>
+</ul>
