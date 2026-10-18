@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   root "users#index"
 
   # User routes
-  resources :users, only: [ :create, :new, :show, :edit, :index, :update ]
+  resources :users
 end

@@ -4,3 +4,6 @@
   Username: <%= form.text_field :username %><br><br>
   <%= form.submit %>
 <% end %>
+
+<%= button_to "Delete", @user, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+<%= link_to "Home", users_path %>
