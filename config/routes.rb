@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   # User create and new routes
-  resources :users, only: [ :create, :new, :show ]
+  resources :users, only: [ :create, :new, :show, :edit ]
 end

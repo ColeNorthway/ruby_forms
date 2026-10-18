@@ -5,9 +5,9 @@ class UsersController < ApplicationController
 
   def create
     def create
-      @instance = User.new(instance_params)
-      if @instance.save
-        redirect_to @instance
+      @user = User.new(user_params)
+      if @user.save
+        redirect_to @user
       else
         render :new, status: :unprocessable_entity
       end
@@ -18,9 +18,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   private
 
-  def instance_params
+  def user_params
     params.expect(user: [ :password, :username, :email ])
   end
 end
